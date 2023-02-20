@@ -39,3 +39,4 @@ if (computerChoice == "Rock" && userInput == "Paper") {
     console.log("It's a draw!")
 }
 
+//TODO try with a switch instead of if statements
