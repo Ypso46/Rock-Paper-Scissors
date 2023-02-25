@@ -1,6 +1,7 @@
-let prompt = require('prompt-sync')()
+//let prompt = require('prompt-sync')()
 
 //function to get a random choise for the computer
+/*
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3)
     let computerChoice = ""
@@ -35,8 +36,15 @@ if (computerChoice == "Rock" && userInput == "Paper") {
     console.log("Computer won!")
 } else if (computerChoice == "Scissors" && userInput == "Rock") {
     console.log("You won!") 
-} else {
+} else {s
     console.log("It's a draw!")
 }
+*/
 
-//TODO try with a switch instead of if statements
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert('You clicked me!');
+    });
+});
