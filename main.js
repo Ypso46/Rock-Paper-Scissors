@@ -43,30 +43,39 @@ if (computerChoice == "Rock" && userInput == "Paper") {
 
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == 'Rock') {
+    if (playerSelection == 'rock') {
         console.log('Player plays Rock');
-    } else if (playerSelection == 'Paper') {
+    } else if (playerSelection == 'paper') {
         console.log('Players plays Paper');
-    } else if (playerSelection == 'Scissors') {
+    } else if (playerSelection == 'scissors') {
         console.log('Player plays Scissors') 
     } else {
         console.log('Something went wrong, contact Stan!');
     }
-    if (computerSelection == 'Rock') {
-        console.log('Player plays Rock');
-    } else if (computerSelection == 'Paper') {
-        console.log('Players plays Paper');
-    } else if (computerSelection == 'Scissors') {
-        console.log('Player plays Scissors') 
-    } else {
-        console.log('Something went wrong, contact Stan!');
-    }
+    // if (computerSelection == 'Rock') {
+    //     console.log('Player plays Rock');
+    // } else if (computerSelection == 'Paper') {
+    //     console.log('Players plays Paper');
+    // } else if (computerSelection == 'Scissors') {
+    //     console.log('Player plays Scissors') 
+    // } else {
+    //     console.log('Something went wrong, contact Stan!');
+    // }
 }
 
 const buttons = document.querySelectorAll('button');
 
+const content = document.querySelector('.playerResult');
+
+const result = document.createElement('div');
+result.classList.add('result');
+
+content.appendChild(result);
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        playRound();
+        result.textContent = 'Player plays: ' + button.id;
     });
 });
+
+
